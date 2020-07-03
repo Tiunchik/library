@@ -1,9 +1,12 @@
-package org.library.domains;
+package org.chess.library.monitoring;
+
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
+@Component
 @Entity(name = "METRIKS")
 public class MonitoringEvent {
 
@@ -83,7 +86,7 @@ public class MonitoringEvent {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, value, parameters, event_timestamp.getTime());
+        return Objects.hash(id, name, value, parameters, event_timestamp);
     }
 
     @Override

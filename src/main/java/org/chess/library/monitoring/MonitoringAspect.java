@@ -1,11 +1,9 @@
-package org.library.aspects;
+package org.chess.library.monitoring;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.library.annotations.Monitoring;
-import org.library.domains.MonitoringEvent;
-import org.library.repositories.MonitorEventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -22,7 +20,7 @@ public class MonitoringAspect {
         this.evRep = evRep;
     }
 
-    @Around("@annotation(org.library.annotations.Monitoring)")
+    @Around("@annotation(org.chess.library.monitoring.Monitoring)")
     public Object doLogging(ProceedingJoinPoint jP) {
         MethodSignature signature = (MethodSignature) jP.getSignature();
         Method method = signature.getMethod();

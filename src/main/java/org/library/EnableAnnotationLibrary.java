@@ -1,4 +1,5 @@
-import org.library.Config;
+package org.library;
+
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.Retention;

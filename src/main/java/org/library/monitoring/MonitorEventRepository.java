@@ -1,4 +1,4 @@
-package org.chess.library.monitoring;
+package org.library.monitoring;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;

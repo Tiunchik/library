@@ -1,4 +1,4 @@
-package org.chess.library.monitoring;
+package org.library.monitoring;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -20,7 +20,7 @@ public class MonitoringAspect {
         this.evRep = evRep;
     }
 
-    @Around("@annotation(org.chess.library.monitoring.Monitoring)")
+    @Around("@annotation(org.library.monitoring.Monitoring)")
     public Object doLogging(ProceedingJoinPoint jP) {
         MethodSignature signature = (MethodSignature) jP.getSignature();
         Method method = signature.getMethod();

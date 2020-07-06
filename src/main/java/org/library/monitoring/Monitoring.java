@@ -1,4 +1,4 @@
-package org.chess.library.monitoring;
+package org.library.monitoring;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

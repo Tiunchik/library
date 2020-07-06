@@ -9,16 +9,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
+@ComponentScan(basePackageClasses = {MonitoringEvent.class})
 @EnableJpaRepositories(basePackageClasses = org.library.monitoring.MonitorEventRepository.class)
+@ComponentScan(basePackageClasses = {MonitoringAspect.class})
 public class Config {
 
-    @Bean
-    public MonitoringEvent monitoringEvent() {
-        return new MonitoringEvent();
-    }
-
-    @Bean
-    public MonitoringAspect monitoringAspect(MonitorEventRepository eventRepository) {
-        return new MonitoringAspect(eventRepository);
-    }
 }

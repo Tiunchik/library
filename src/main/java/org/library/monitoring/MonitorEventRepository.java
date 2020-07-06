@@ -6,6 +6,5 @@ import org.springframework.stereotype.Repository;
 
 
 @Component
-@Repository
 public interface MonitorEventRepository extends JpaRepository<MonitoringEvent, Long> {
 }
